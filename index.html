@@ -30,16 +30,17 @@
 
 <script>
     $(document).ready(function() {
-        $('.ademo').textareafullscreen( {
+	    $(document).on("click",".tx-icon-save",function(){
+		    alert("Save clicked!");
+	    });
+
+	    $('.ademo').textareafullscreen( {
 		overlay: true,
 		maxWidth: '80%',
 		maxHeight: '80%',
 	        extButtons: '<a href="#" class="tx-icon-save fas fa-save"></a>',
                 fontAwesome: true,
 	});
-	    $(document).on("click",".tx-icon-save",function(){
-		    alert("Save clicked!");
-	    });
     });
 </script>
 
