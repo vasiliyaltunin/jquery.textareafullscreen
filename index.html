@@ -91,23 +91,24 @@
 <h1>
 <a name="use" class="anchor" href="#use"><span class="octicon octicon-link"></span></a>Use</h1>
 
-<pre><code>$(document).ready(function() {
-    $('#demo').textareafullscreen({
-        overlay: true, // Overlay
-        maxWidth: '80%', // Max width
-        maxHeight: '80%' // Max height
-	extButtons: '&lt;a href="#" class="tx-icon-save fas fa-save"&gt&lt/a&gt;', //Add custom button
-        fontAwesome: true, //Use FontAwesome - you must include all css and js from it 
-	
+<pre><code>&lt;textarea id="demo"&gt;&lt;/textarea&gt;
+&lt;script&gt;
+    $(document).ready(function() {
+        $('#demo').textareafullscreen({
+		overlay: true, // Overlay
+		maxWidth: '80%', // Max width
+		maxHeight: '80%', // Max height
+	        extButtons: '&lt;a href="#" class="tx-icon-save fas fa-save"&gt&lt/a&gt;', //Add custom button
+                fontAwesome: true, //Use FontAwesome - you must include all css and js from it 	
+	});
     });
-});
+&lt;/script&gt;
 </code></pre>
 
 <h1>
 <a name="use" class="anchor" href="#btn"><span class="octicon octicon-link"></span></a>Additional button css</h1>
 
 <pre><code>
-
 .tx-editor-wrapper .tx-editor .tx-icon-save {
     position: absolute;
     right: 5px;
@@ -116,8 +117,7 @@
     height: 16px;
     cursor: pointer;
     z-index: 3;
-  }
-  
+  }  
 </code></pre>
 
         </section>
