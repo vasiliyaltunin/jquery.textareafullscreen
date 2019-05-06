@@ -1,3 +1,9 @@
+.tx-editor-wrapper {
+  position: relative;
+  width: 464px;
+  height: 130px;
+}
+
 .tx-editor-wrapper .tx-editor.expanded {
   position: fixed;
   top: 0;
@@ -13,7 +19,7 @@
 
 
 .tx-editor-wrapper .tx-editor {
-    height: 158px;
+    height: 130px;
 }
 
 .tx-editor-wrapper .tx-editor .tx-icon {
