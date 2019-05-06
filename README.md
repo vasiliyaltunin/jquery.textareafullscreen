@@ -35,4 +35,4 @@ $(document).ready(function() {
   }
 ```
 
-[Demo](http://creoart.github.io/jquery.textareafullscreen)
+[Demo](https://vasiliyaltunin.github.io/jquery.textareafullscreen/#)
