@@ -1,7 +1,7 @@
 jQeury.textareafullscreen
 =============
 
-Jquery plugin textarea fullscreen mode
+Jquery plugin textarea fullscreen mode, bootstrap friendly
 
 # Install
 Insert this code before tag `</head>`
