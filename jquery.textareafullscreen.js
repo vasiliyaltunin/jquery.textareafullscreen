@@ -49,7 +49,8 @@
             overlay: true,
             maxWidth: '',
             maxHeight: '',
-            key: null
+	    extButtons: '',
+	    fontAwesome: false,
         };
 
         for( i = 0; i < this.bindMethods.length; i++) {
@@ -80,8 +81,25 @@
             return;
         }
 
+	var addButtons='';
+
+        if (this.settings.extButtons){
+            addButtons = this.settings.extButtons;
+        }
+
+	var fulscreenButton = '';
+		
+	if (this.settings.fontAwesome) {
+		fulscreenButton = '<a href="#" class="tx-icon fas fa-expand"></a>';
+	} else {
+		fulscreenButton = '<a href="#" class="tx-icon tx-img-icon"></a>';
+	}
+
+
+
+
         content =
-            '<div class="tx-editor-wrapper"><div class="tx-editor"><a href="#" class="tx-icon"></a></div></div>';
+            '<div class="tx-editor-wrapper"><div class="tx-editor">'+fulscreenButton+addButtons+'</div></div>';
         this.$wrapper = $(content).insertAfter(this.$el);
         this.$editor = this.$wrapper.find('.tx-editor');
         this.$icon = this.$editor.find('.tx-icon');
@@ -92,20 +110,6 @@
             'height': '100%',
             'resize': 'none'
         });
-
-        var self = this;
-
-        if (this.settings.key !== null) {
-            this.$wrapper.on('keyup', function (e) {
-                if (e.ctrlKey && (String.fromCharCode(e.which) == self.settings.key.toUpperCase() || String.fromCharCode(e.which) == self.settings.key)) {
-                    if (isFullscreen()) {
-                        self.minimize();
-                    } else {
-                        self.expand();
-                    }
-                }
-            });
-        }
 
         //Fullscreen icon click event
         this.$icon.on('click.txeditor.icon', this.onIconClick);
